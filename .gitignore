@@ -39,3 +39,13 @@
 
 # debug information files
 *.dwo
+
+# conan 
+venv
+
+# build directories
+build
+cmake
+
+# misc
+.vscode
