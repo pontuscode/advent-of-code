@@ -1,5 +1,6 @@
 #include <iostream>
 #include <argparse/argparse.hpp>
+#include "logger.h"
 
 
 int main(int argc, char* argv[]) {
@@ -17,8 +18,11 @@ int main(int argc, char* argv[]) {
         std::exit(1);
     }
 
+    Logger logger = Logger();
     if(program.get<bool>("verbose") == true) {
-        std::cout << "Verbosity enabled!" << std::endl;
+        logger.setLevel(DEBUG);
+        logger.debug("Verbosity enabled!");
+        
     } else {
         std::cout << "Verbosity not enabled :/" << std::endl;
     }
