@@ -30,11 +30,12 @@ TODO
 
 ### Creating the logger
 
-The [logger](./logger/) package is created specifically for this project and
-is not uploaded to any Conan repository. To build it, do the following:
+The [logger](./logger/README.md) package is created specifically for this
+project and not uploaded to any Conan repository. To build it, follow these
+steps:
 
 ```sh
-cd logger
+cd logger/
 conan create .
 ```
 
@@ -47,7 +48,7 @@ Let's build the [prep](./prep/) project! Do the following:
 
 ```sh
 # switch to prep directory
-cd prep
+cd prep/
 # install dependencies
 conan install .. --output-folder=build --build=missing
 # build the project
