@@ -19,6 +19,8 @@ python3 -m venv venv
 source venv/bin/activate
 # install conan
 pip install conan
+# let conan set up your computer's profile
+conan profile detect --exist-ok
 ```
 
 All projects use the same external dependencies, which are defined in
