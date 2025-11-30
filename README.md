@@ -5,8 +5,9 @@ TODO
 ## Building projects
 
 I use CMake to build all "projects" (or all days). I've also opted to use a
-few external packages/libraries for handling e.g. CLI arguments and testing.
-To manage these, I use [Conan](https://docs.conan.io/2/index.html).
+few external packages/libraries for handling e.g. CLI arguments and testing,
+and a few packages for e.g. logging. To manage these, I use
+[Conan](https://docs.conan.io/2/index.html).
 
 ### Installing Conan
 
@@ -26,6 +27,19 @@ All projects use the same external dependencies, which are defined in
 ### Installing CMake
 
 TODO
+
+### Creating the logger
+
+The [logger](./logger/) package is created specifically for this project and
+is not uploaded to any Conan repository. To build it, do the following:
+
+```sh
+cd logger
+conan create .
+```
+
+This builds the logger library and adds it to your Conan cache, which then
+makes it possible to add it as a dependency for our other projects. Easy!
 
 ### Example
 
