@@ -1,3 +1,5 @@
+#pragma once
+
 #include <ctime>
 #include <iostream>
 #include <fstream>
@@ -5,11 +7,11 @@
 
 using namespace std;
 
-enum LogLevel { 
-    DEBUG = 10, 
-    INFO = 20, 
-    WARNING = 30, 
-    ERROR = 40, 
+enum LogLevel {
+    DEBUG = 10,
+    INFO = 20,
+    WARNING = 30,
+    ERROR = 40,
     CRITICAL = 50
 };
 
